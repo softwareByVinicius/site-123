@@ -10,6 +10,10 @@
     font-family: "Nostalgia";
     src: url("../fonts/NostalgiaRegular-pg3lK.ttf");
 }
+@font-face {
+    font-family: "TimeBurner";
+    src: url("../fonts/Timeburner-xJB8.ttf");
+}
 
 body{
     background: url("../images/background.jpg");
@@ -54,28 +58,43 @@ hr {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 .content-title{
-    font-family: "Nostalgia";
+
     margin-top: 20vh;
-    font-size: 50pt;
+    font-size: 35pt;
     align-self: center;
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    text-align: center;
+    max-width: 60%;
     letter-spacing: 2px;
 }
 .content-title h2{
     margin-bottom: 30px;
     text-align: center;
+    font-family: "FreeSans";
+
 }
 .content-title ul{
-    list-style: none;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
+}
+.content-title li{
+    border: solid 1px rgb(82, 82, 82);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
 }
 .content-title a{
     font-size: 20pt;
     text-decoration: none;
     color: white;
+    font-family: "TimeBurner";
 }
 .logo-title{
     display: flex;
@@ -102,7 +121,7 @@ hr {
     transform: translateX(25vw);
     justify-content: center;
     text-align: center;
-    font-family: Nostalgia;
+    font-family: "FreeSans";
 
 }
 .menu ul{
@@ -118,6 +137,7 @@ hr {
     font-size: 20pt;
     text-decoration: none;
     color: white;
+    font-family: "TimeBurner";
 
 }
 
@@ -127,43 +147,4 @@ hr {
     left: 1vw;
     scale: 1.6;
     cursor: pointer;
-}
-@media (max-width:400px){
-    header{
-        font-size: 5pt;
-        width: 77vw;
-    }
-    header i{
-        scale: 3.6;
-    }
-    #logo{
-        margin-right: 5px;
-    }
-    hr{
-        width: 77vw;
-    }
-    .content-title h2{
-        font-size: 15pt;
-    }
-    .content-title a{
-        font-size: 10pt;
-    }
-    .menu{
-        position: fixed;
-        right: 0;
-        height: 100vh;
-        width: 40vw;
-        background: black;
-        visibility: hidden;
-        display: flex;
-        transform: translateX(40vw);
-        justify-content: center;
-        text-align: center;
-    }
-    .menu a{
-        font-size: 15pt;
-    }
-    .menu i{
-        left: 5vw;
-    }
 }

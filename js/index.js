@@ -12,7 +12,7 @@ function openMenu(){
 function closeMenu(){
     const menu = document.querySelector(".menu");
     menu.style.transition = "all 0.5s ease-in-out"
-    menu.style.transform = "translateX(25vw)"
+    menu.style.transform = "translateX(100vw)"
     menu.style.visibility = "hidden"
 
 }
