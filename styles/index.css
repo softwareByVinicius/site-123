@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "FreeSans";
+    src: url("../fonts/FreeSans-LrmZ.ttf");
+}
+@font-face {
+    font-family: "Nostalgia";
+    src: url("../fonts/NostalgiaRegular-pg3lK.ttf");
+}
+
+body{
+    background: url("../images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    align-items: center;
+    width: 94vw;
+    align-self: center;
+    font-family: FreeSans;
+    font-weight: 800;
+    letter-spacing: 2px;
+    
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header i{
+    cursor: pointer;
+    scale:4.6;
+    padding-right: 10px;
+}
+hr {
+    width: 94vw;
+    align-self: center;
+    border: none;
+    height: 2px;
+    background: #000;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+.content-title{
+    font-family: "Nostalgia";
+    margin-top: 20vh;
+    font-size: 50pt;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    letter-spacing: 2px;
+}
+.content-title h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.content-title ul{
+    list-style: none;
+    text-align: center;
+
+}
+.content-title a{
+    font-size: 20pt;
+    text-decoration: none;
+    color: white;
+}
+.logo-title{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 12vh;
+
+}
+#logo{
+    width: 12vw;
+    height: 12vh;
+    margin-right: 30px;
+}
+.menu{
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 25vw;
+    background: black;
+    visibility: hidden;
+    display: flex;
+    transform: translateX(25vw);
+    justify-content: center;
+    text-align: center;
+    font-family: Nostalgia;
+
+}
+.menu ul{
+    list-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    top: 10vh;
+}
+.menu a{
+    font-size: 20pt;
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu i{
+    position: absolute;
+    top: 2vh;
+    left: 1vw;
+    scale: 1.6;
+    cursor: pointer;
+}
+@media (max-width:400px){
+    header{
+        font-size: 5pt;
+        width: 77vw;
+    }
+    header i{
+        scale: 3.6;
+    }
+    #logo{
+        margin-right: 5px;
+    }
+    hr{
+        width: 77vw;
+    }
+    .content-title h2{
+        font-size: 15pt;
+    }
+    .content-title a{
+        font-size: 10pt;
+    }
+    .menu{
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        width: 40vw;
+        background: black;
+        visibility: hidden;
+        display: flex;
+        transform: translateX(40vw);
+        justify-content: center;
+        text-align: center;
+    }
+    .menu a{
+        font-size: 15pt;
+    }
+    .menu i{
+        left: 5vw;
+    }
+}
