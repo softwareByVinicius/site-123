@@ -59,7 +59,7 @@ hr {
 }
 .content-title{
 
-    margin-top: 20vh;
+    margin-top: 5vh;
     font-size: 35pt;
     align-self: center;
     display: flex;
@@ -72,6 +72,11 @@ hr {
     margin-bottom: 30px;
     text-align: center;
     font-family: "FreeSans";
+    background: transparent;
+
+}
+.content-title h2::selection{
+    background-color: black;
 
 }
 .content-title ul{
@@ -147,4 +152,8 @@ hr {
     left: 1vw;
     scale: 1.6;
     cursor: pointer;
+}
+#lock{
+    height: 45vh;
+
 }
