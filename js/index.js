@@ -17,6 +17,3 @@ function closeMenu(){
     menu.style.visibility = "hidden";
 
 }
-function procedureReturnToMain(){
-    location.href = location.origin;
-}

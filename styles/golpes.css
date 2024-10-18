@@ -121,3 +121,17 @@ video{
     margin-left: 50px;
     
 }
+.return{
+    align-self: center;
+    cursor: pointer;
+}
+a{  align-self: center;
+    margin-top: 50px;
+    color: white;
+    width: fit-content;
+}
+video{
+    background: #000;
+    border: none;
+    outline: none;
+}
