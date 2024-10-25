@@ -135,3 +135,6 @@ video{
     border: none;
     outline: none;
 }
+i{
+    scale: 5;
+}
