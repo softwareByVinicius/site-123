@@ -1,21 +1,28 @@
-*{
+
+  /* Reset */
+  * {
     margin: 0;
     padding: 0;
-}
-@font-face {
+    box-sizing: border-box;
+  }
+
+  /* Fonte personalizada */
+  @font-face {
     font-family: "FreeSans";
     src: url("../fonts/FreeSans-LrmZ.ttf");
-}
-@font-face {
+  }
+
+  @font-face {
     font-family: "Nostalgia";
     src: url("../fonts/NostalgiaRegular-pg3lK.ttf");
-}
-@font-face {
+  }
+
+  @font-face {
     font-family: "TimeBurner";
     src: url("../fonts/Timeburner-xJB8.ttf");
-}
+  }
 
-body{
+  body{
     background: url("../images/background.jpg");
     background-position: center;
     background-size: cover;
@@ -50,56 +57,12 @@ header i{
     padding-right: 10px;
 }
 hr {
-    width: 94vw;
+    max-width: 94vw;
     align-self: center;
     border: none;
     height: 2px;
     background: #000;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-.content-title{
-
-    margin-top: 5vh;
-    font-size: 35pt;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 60%;
-    letter-spacing: 2px;
-}
-.content-title h2{
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: "FreeSans";
-    background: transparent;
-
-}
-.content-title h2::selection{
-    background-color: black;
-
-}
-.content-title ul{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-
-}
-.content-title li{
-    border: solid 1px rgb(82, 82, 82);
-    border-radius: 10px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    height: 120px;
-    align-items: center;
-    justify-content: center;
-}
-.content-title a{
-    font-size: 20pt;
-    text-decoration: none;
-    color: white;
-    font-family: "TimeBurner";
 }
 .logo-title{
     display: flex;
@@ -115,51 +78,85 @@ hr {
     height: 12vh;
     margin-right: 30px;
 }
-.menu{
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    width: 25vw;
-    background: black;
-    visibility: hidden;
-    display: flex;
-    transform: translateX(25vw);
-    justify-content: center;
+  .content-title {
+    font-family: FreeSans;
     text-align: center;
-    font-family: "FreeSans";
+    margin: 3rem 0;
+    font-size: 2.5rem;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
-}
-.menu ul{
-    list-style: none;
-    position: absolute;
+  .content-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+  }
+
+  .content-options div {
+    background: linear-gradient(135deg, #4a4e69, #22223b); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 80vh;
-    top: 10vh;
-}
-.menu a{
-    font-size: 20pt;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "TimeBurner", sans-serif;
+    padding: 20px;
+    border-radius: 16px;
+    color: #f2e9e4; 
+    width: 260px;
+    height: 320px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+    text-align: center;
+  }
+
+  .content-options div:hover {
+    transform: translateY(-8px) scale(1.02); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); 
+  }
+
+  .content-options h2 {
+    font-size: 1.6rem;
+    color: #f2e9e4; 
+    margin: 1rem 0;
+    transition: color 0.3s ease-in;
+  }
+
+  .content-options div:hover h2 {
+    color: #c9ada7; 
+  }
+
+  .content-options div a {
+    font-size: 1rem;
     text-decoration: none;
-    color: white;
-    font-family: "TimeBurner";
+    color: #f2e9e4;
+    padding: 0.75rem 1rem;
+    background-color: #9a8c98;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 80%;
+  }
 
-}
+  .content-options div a:hover {
+    background-color: #c9ada7; 
+    transform: scale(1.05); 
+  }
 
-.menu i{
-    position: absolute;
-    top: 2vh;
-    left: 1vw;
-    scale: 1.6;
-    cursor: pointer;
-}
-#lock{
-    height: 45vh;
 
-}
-.return{
-    align-self: center;
-    margin-top: 50px;
-    cursor: pointer;
-}
+  .lock {
+    width: 70px;
+    height: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); 
+    transition: transform 0.4s ease;
+  }
+
+  .content-options div:hover .lock {
+    transform: rotate(10deg) scale(1.05); 
+  }
+
+
 

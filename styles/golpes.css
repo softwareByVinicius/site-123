@@ -72,50 +72,6 @@ hr {
     height: 12vh;
     margin-right: 30px;
 }
-.menu{
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    width: 25vw;
-    background: black;
-    visibility: hidden;
-    display: flex;
-    transform: translateX(25vw);
-    justify-content: center;
-    text-align: center;
-    font-family: "FreeSans";
-
-}
-.menu ul{
-    list-style: none;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 80vh;
-    top: 10vh;
-}
-.menu a{
-    font-size: 20pt;
-    text-decoration: none;
-    color: white;
-    font-family: "TimeBurner";
-
-}
-
-.menu i{
-    position: absolute;
-    top: 2vh;
-    left: 1vw;
-    scale: 1.6;
-    cursor: pointer;
-}
-video{
-    margin-top: 10vh;
-    align-self: center;
-    width: 50vw;
-    height: 50vh;
-}
 .fas{
     margin-top: 30px;
     margin-left: 50px;
