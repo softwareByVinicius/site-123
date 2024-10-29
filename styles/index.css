@@ -1,84 +1,67 @@
-
-  /* Reset */
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-
-  /* Fonte personalizada */
-  @font-face {
+}
+@font-face {
     font-family: "FreeSans";
     src: url("../fonts/FreeSans-LrmZ.ttf");
-  }
+}
 
-  @font-face {
-    font-family: "Nostalgia";
-    src: url("../fonts/NostalgiaRegular-pg3lK.ttf");
-  }
-
-  @font-face {
+@font-face {
     font-family: "TimeBurner";
     src: url("../fonts/Timeburner-xJB8.ttf");
-  }
+}
 
-  body{
-    background: url("../images/background.jpg");
-    background-position: center;
-    background-size: cover;
+body {
+    background: url("../images/background.jpg") center center/cover no-repeat;
     color: white;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: 35vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 25px;
     align-items: center;
-    width: 94vw;
-    align-self: center;
+    width: 85vw;
+    max-width: 1200px;
+    margin: 0 auto;
     font-family: FreeSans;
     font-weight: 800;
     letter-spacing: 2px;
-    
 }
-header a{
+
+header a {
     text-decoration: none;
     color: white;
 }
-header i{
+
+header i {
     cursor: pointer;
-    scale:4.6;
+    font-size: 2.5rem;
     padding-right: 10px;
 }
-hr {
-    max-width: 94vw;
-    align-self: center;
-    border: none;
-    height: 2px;
-    background: #000;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-.logo-title{
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    width: 12vw;
-    height: 12vh;
 
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
-#logo{
-    width: 12vw;
-    height: 12vh;
-    margin-right: 30px;
+
+#logo {
+    width: 15vw;
+    max-width: 120px;
+    margin-right: 10px;
 }
-  .content-title {
+.content-title {
     font-family: FreeSans;
     text-align: center;
     margin: 3rem 0;
@@ -86,18 +69,17 @@ hr {
     color: #f2f2f2;
     letter-spacing: 1px;
     text-transform: uppercase;
-  }
-
-  .content-options {
+}
+.content-options {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
     margin: 0 auto;
     padding-bottom: 3rem;
-  }
-
-  .content-options div {
+    max-width: 85vw;
+}
+.content-options div {
     background: linear-gradient(135deg, #4a4e69, #22223b); 
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
     display: flex;
@@ -112,25 +94,25 @@ hr {
     height: 320px;
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
     text-align: center;
-  }
+}
 
-  .content-options div:hover {
+.content-options div:hover {
     transform: translateY(-8px) scale(1.02); 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); 
-  }
+}
 
-  .content-options h2 {
+.content-options h2 {
     font-size: 1.6rem;
     color: #f2e9e4; 
     margin: 1rem 0;
     transition: color 0.3s ease-in;
-  }
+}
 
-  .content-options div:hover h2 {
+.content-options div:hover h2 {
     color: #c9ada7; 
-  }
+}
 
-  .content-options div a {
+.content-options div a {
     font-size: 1rem;
     text-decoration: none;
     color: #f2e9e4;
@@ -139,24 +121,99 @@ hr {
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
     width: 80%;
-  }
+}
 
-  .content-options div a:hover {
+.content-options div a:hover {
     background-color: #c9ada7; 
     transform: scale(1.05); 
-  }
+}
 
-
-  .lock {
+.lock {
     width: 70px;
     height: auto;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); 
     transition: transform 0.4s ease;
-  }
+}
 
-  .content-options div:hover .lock {
+.content-options div:hover .lock {
     transform: rotate(10deg) scale(1.05); 
-  }
+}
 
 
+@media (max-width: 768px) {
+  header {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+}
+
+  .logo-title {
+      flex-direction: column;
+      gap: 8px;
+}
+
+  #logo {
+      width: 20vw;
+      margin-left: 0;
+}
+
+  .content-title {
+      font-size: 2rem;
+}
+
+  .content-options {
+      max-width: 90vw;
+      gap: 1.5rem;
+}
+
+  .content-options div {
+      width: 200px;
+      height: 280px;
+}
+
+  .content-options h2 {
+      font-size: 1.4rem;
+}
+}
+
+@media (max-width: 480px) {
+  header {
+      width: 95vw;
+}
+
+  .content-title {
+      font-size: 1.8rem;
+      margin: 2rem 0;
+}
+
+  #logo {
+      width: 30vw;
+      max-width: 80px;
+      margin: 0;
+}
+
+  .content-options {
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 90vw;
+}
+
+  .content-options div {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      padding: 20px;
+}
+
+  .content-options h2 {
+      font-size: 1.2rem;
+}
+
+  .content-options div a {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+}
+}
 
